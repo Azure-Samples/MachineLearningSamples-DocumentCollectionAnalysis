@@ -16,19 +16,19 @@ The prerequisites to run this example are as follows:
 
 ## Introduction
 
-This example showcases how to analyze a large collection of documents, which includes phrase learning, topic modeling, and topic model analysis using Azure ML Workbench. With Azure ML Workbench, one can easily scale up and out if the collection of documents is huge. And it can help tune hyper-parameters on different compute contexts. The capability of using iPython notebook on Azure ML Workbench also enables the development to be much easier.
+This example showcases how to analyze a large collection of documents, which includes phrase learning, topic modeling, and topic model analysis using Azure ML Workbench. With Azure ML Workbench, one can easily scale up and out if the collection of documents is huge. And it can help tune hyper-parameters on different compute contexts. The capability of using iPython notebooks within Azure ML Workbench also enables ease of development.
 
 ## Overview
 
-With large amount of data (especially unstructured text data) collected every day, a significant challenge is to organize, search, and understand vast quantities of those texts. The Document Collection Analysis example is aimed to demonstrate an efficient and automated end to end workflow on how to analyze large document collection and serve the downstream NLP tasks.
+With large amount of data (especially unstructured text data) collected every day, a significant challenge is to organize, search, and understand vast quantities of these texts. The Document Collection Analysis example is aimed to demonstrate an efficient and automated end to end workflow on how to analyze large document collection and serve the downstream NLP tasks.
 
 The key learnings delivered by this example are as follows:
 
-1. Learn phrases from documents, which could provide more meaningful information versus individual words.
+1. Learn phrases from documents, which can provide meaningful information versus individual words.
 
-1. Discover hidden topic patterns that presented across different documents.
+1. Discover hidden topic patterns that present itself across different documents.
 
-1. Annotate documents (document embedding) according to those topics and serve as a featurizer at document level.
+1. Annotate documents (document embedding) according to those topics and serve as a featurizer at a document level.
 
 1. Use the learned topics to better organize, search, and summarize documents.
 

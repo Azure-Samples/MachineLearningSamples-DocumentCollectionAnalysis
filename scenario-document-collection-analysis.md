@@ -1,18 +1,19 @@
 # Document Collection Analysis
 
-[//]: # "![Data_Diagram](https://www.usb-antivirus.com/wp-content/uploads/2014/11/tutorial-windwos-10-2-320x202.png)"
+## Link of the Gallery GitHub repository
+Following is the link to the public GitHub repository: 
 
-**[Find the code on GitHub repository](https://github.com/Azure/MachineLearningSamples-DocumentCollectionAnalysis)**
-
-[//]: # (**The above info will be included in the Readme on GitHub**)
+[https://github.com/Azure/MachineLearningSamples-DocumentCollectionAnalysis](https://github.com/Azure/MachineLearningSamples-DocumentCollectionAnalysis)
 
 ## Prerequisites
 
 The prerequisites to run this example are as follows:
 
-1. Make sure that you have properly installed Azure ML Workbench by following the [installation guide (TODO)](https://github.com/Azure/ViennaDocs/blob/master/Documentation/Installation.md).
+1. An [Azure account](https://azure.microsoft.com/en-us/free/) (free trials are available).
 
-1. This example could be run on any compute context. However, it is recommended to run it on a multi-core machine with at least of 16-GB memory and 5-GB disk space.
+2. An installed copy of [Azure Machine Learning Workbench](./overview-what-is-azure-ml.md) following the [quick start installation guide](./quick-start-installation.md) to install the program and create a workspace.
+
+3. This example could be run on any compute context. However, it is recommended to run it on a multi-core machine with at least of 16-GB memory and 5-GB disk space.
 
 ## Introduction
 
@@ -195,7 +196,7 @@ Notebook `5_Topic_Model_Analysis.ipynb` shows how to analysis the topical conten
 
 The last Notebook `6_Topic_Model_Visualizations.ipynb` visualizes a Dendrogram of hierarchically clustered topics, as well as 2-D projection of topics from topic similarity matrix. The visualization can help to better understand the relationship between different topics.
 
-## Conclusion & Next Steps
+## Conclusion
 
 This real world scenario highlights how to use well-known text analytics techniques (in this case, phrase learning and LDA topic modeling) to produce a robust model, and how Azure Machine Learning Workbench can help track model performance and seamlessly run learners at higher scale. In more detail:
 
@@ -216,14 +217,6 @@ This real world scenario highlights how to use well-known text analytics techniq
 * **Michael Roder, Andreas Both
 , Alexander Hinneburg**, [_Exploring the Space of Topic Coherence Measures_](http://svn.aksw.org/papers/2015/WSDM_Topic_Evaluation/public.pdf). Proceedings of the eighth ACM international conference on Web search and data mining. ACM, 2015.
 
-## Acknowledgement
-
-Thanks T.J Hazen for the great technical discussions on the NLP topics. Thanks Peter Morgan and John Pelak for deep involvement of implementing this work on the Azure Machine Learning Workbench.
-
 ## Contact
 
 Feel free to contact Ke Huang (kehuan@microsoft.com) and Timothy J. Hazen (TJ.Hazen@microsoft.com) with any question or comment.
-
-## Disclaimer
-
-_TODO_

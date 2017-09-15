@@ -2,45 +2,47 @@
 
 ![Data_Diagram](https://www.usb-antivirus.com/wp-content/uploads/2014/11/tutorial-windwos-10-2-320x202.png)
 
-* Documentation site for GitHub repository (TODO).
+**[Detailed documentation (TODO)]()**
 
-[//]: # (**The above info will be included in the Readme on GitHub**)
+## Introduction
+
+This scenario demonstrates how to summarize and analyze a large collection of documents, including techniques such as phrase learning, topic modeling, and topic model analysis using Azure ML Workbench. Azure Machine Learning Workbench provides for easy scale up for very large document collection, and provides mechanisms to train and tune models within a variety of compute contexts, ranging from local compute to Data Science Virtual Machines to Spark Cluster. Easy development is provided through Jupyter notebooks within Azure Machine Learning Workbench.
 
 ## Prerequisites
 
 The prerequisites to run this example are as follows:
 
-1. Make sure that you have properly installed Azure ML Workbench by following the [installation guide (TODO)](https://github.com/Azure/ViennaDocs/blob/master/Documentation/Installation.md).
+1. Make sure that you have properly installed [Azure Machine Learning Workbench (TODO)](./overview-what-is-azure-ml) by following the [quick start installation guide (TODO)](./quick-start-installation).
 
 1. This example could be run on any compute context. However, it is recommended to run it on a multi-core machine with at least of 16-GB memory and 5-GB disk space.
 
-## Introduction
-
-This example showcases how to analyze a large collection of documents, which includes phrase learning, topic modeling, and topic model analysis using Azure ML Workbench. With Azure ML Workbench, one can easily scale up and out if the collection of documents is huge. And it can help tune hyper-parameters on different compute contexts. The capability of using iPython notebook on Azure ML Workbench also enables the development to be much easier.
-
 ## Overview
 
-With large amount of data (especially unstructured text data) collected every day, a significant challenge is to organize, search, and understand vast quantities of those texts. The Document Collection Analysis example is aimed to demonstrate an efficient and automated end to end workflow on how to analyze large document collection and serve the downstream NLP tasks.
+With a large amount of data (especially unstructured text data) collected every day, a significant challenge is to organize, search, and understand vast quantities of these texts. This document collection analysis scenario demonstrates an efficient and automated end-to-end workflow for analyzing large document collection and enabling downstream NLP tasks.
 
-The key learnings delivered by this example are as follows:
+The key elements delivered by this scenario are:
 
-1. Learn phrases from documents, which could provide more meaningful information versus individual words.
+1. Learning salient multi-words phrase from documents.
 
-1. Discover hidden topic patterns that presented across different documents.
+1. Discovering underlying topics presented in the document collection.
 
-1. Annotate documents (document embedding) according to those topics and serve as a featurizer at document level.
+1. Representing documents by the topical distribution.
 
-1. Use the learned topics to better organize, search, and summarize documents.
+1. Presenting methods for organizing, searching, and summarizing documents based on the topical content.
 
-This example could fit into a vast majority of NLP tasks, including (but not limited to): sentiment analysis, document classification, document semantic similarity, and document search. It is a critical workload for many industries and companies. For instance, government document ingestion and analysis, law firms legal documents analysis, and insurance claim process.
+The methods presented in this scenario could enable a variety of critical industrial workloads, such as discovery of topic trends anomaly, document collection summarization, and similar document search. It can be applied to many different types of document analysis, such as government legislation, news stories, product reviews, customer feedbacks, and scientific research articles.
 
-The machine learning techniques/algorithms used in this example include:
+The machine learning techniques/algorithms used in this scenario include:
 
-1. Text processing pipeline to scrub documents and then find n-grams that best categorize them. Those n-grams can then be used to learn phrases, which could provide more meaningful information than purely using individual words.
+1. Text processing and cleaning
 
-1. A Latent Dirichlet Allocation (LDA) topic model is built to learn latent structure in documents collection. The model can be updated with more documents collected.
+1. Phrase Learning
 
-1. The learned topic model works as a featurizer at document level where new documents can be mapped to a topic vector. By using the mapped topic vector, we can then use it as features for various NLP tasks mentioned earlier.
+1. Topic modeling
+
+1. Corpus summarization
+
+1. Topical trends and anomaly detection
 
 ## Contributing
 

@@ -4,3 +4,5 @@ __pycache__
 .azureml
 .ipynb_checkpoints
 .vscode
+
+.vscode/settings.json

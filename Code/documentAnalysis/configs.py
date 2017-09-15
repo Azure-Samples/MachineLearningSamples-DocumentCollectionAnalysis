@@ -80,7 +80,7 @@ MIN_DOC_COUNT = 2
 MAX_DOC_FREQ = 0.25
 
 # The number of topics need to train
-NUM_TOPICS = 20
+NUM_TOPICS = 30
 # NUM_TOPICS = 20       # for small dataset
 
 # The number of iterations during training the LDA model

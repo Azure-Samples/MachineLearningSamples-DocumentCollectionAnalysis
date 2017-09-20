@@ -1,6 +1,6 @@
 # Document Collection Analysis
 
-**[Detailed documentation (TODO)](./DO_NOT_CLICK)**
+**[Detailed documentation (TODO)](./README.md)**
 
 This scenario demonstrates how to summarize and analyze a large collection of documents, including techniques such as phrase learning, topic modeling, and topic model analysis using Azure ML Workbench. Azure Machine Learning Workbench provides for easy scale up for very large document collection, and provides mechanisms to train and tune models within a variety of compute contexts, ranging from local compute to Data Science Virtual Machines to Spark Cluster. Easy development is provided through Jupyter notebooks within Azure Machine Learning Workbench.
 
@@ -42,7 +42,7 @@ The machine learning techniques/algorithms used in this scenario include:
 
 The prerequisites to run this example are as follows:
 
-* Make sure that you have properly installed [Azure Machine Learning Workbench (TODO)](./DO_NOT_CLICK) by following the [quick start installation guide (TODO)](./DO_NOT_CLICK).
+* Make sure that you have properly installed [Azure Machine Learning Workbench (TODO)](./README.md) by following the [quick start installation guide (TODO)](./README.md).
 
 * This example could be run on any compute context. However, it is recommended to run it on a multi-core machine with at least of 16-GB memory and 5-GB disk space.
 

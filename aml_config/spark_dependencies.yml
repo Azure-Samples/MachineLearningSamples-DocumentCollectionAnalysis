@@ -3,7 +3,7 @@
 
 # For third-party python libraries, see conda_dependencies.yml.
 configuration:
-  "spark.app.name": "Classifying Iris"
+  "spark.app.name": "Document Analysis"
   "spark.yarn.maxAppAttempts": 1
 repositories:
   - "https://mmlspark.azureedge.net/maven"
@@ -16,7 +16,7 @@ packages:
   # Details: https://github.com/Azure/mmlspark
   - group: "com.microsoft.ml.spark"
     artifact: "mmlspark_2.11"
-    version: "0.7"
+    version: "0.7.91"
 
   # Required for SQL Server data sources.
   - group: "com.microsoft.sqlserver"

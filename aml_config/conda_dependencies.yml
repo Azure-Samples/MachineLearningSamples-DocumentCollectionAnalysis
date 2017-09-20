@@ -7,20 +7,23 @@
 # For Spark packages and configuration, see spark_dependencies.yml.
 
 name: project_environment
+channels:
+  - conda-forge
+  - defaults
 dependencies:
   - python=3.5.2
   - scikit-learn
-  - nltk=3.2
-  - pandas=0.19.2
+  - nltk
+  - pandas
   - azure
   - gensim
   - scipy
+  - wordcloud
   - pip:
     - notebook
     - matplotlib
     - azure-storage
     - seaborn
-    - wordcloud
     # The API for Azure Machine Learning Model Management Service.
     # Details: https://github.com/Azure/Machine-Learning-Operationalization
     - azure-ml-api-sdk==0.1.0a10

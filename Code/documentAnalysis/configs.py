@@ -1,17 +1,15 @@
 """
 Variables related to data or storage
 """
-# Blob Storage credentials
-STORAGE_ACCOUNT = 'kehuanamlstorage'
-STORAGE_KEY = 'F2C0yr/S5/rLWw3Yut/1Y1SXKSlBhDpHMeFz+uzUuWfBlqLJG2BJk8/09tQfhr3uzfRtFW7jCPb0j0+m21QYJw=='
-CONTAINER = 'document-collection-analysis'
+# Base URL for anonymous read access to Blob Storage container
+STORAGE_CONTAINER = 'https://bostondata.blob.core.windows.net/scenario-document-collection-analysis/'
 
 # The AMLWorkbench folder used to save intermediate files in a run
 OUTPUT_PATH = 'outputs'
 
 # The dataset file name
 DATASET_FILE = 'CongressionalDataAll_Jun_2017.tsv'
-# DATASET_FILE = 'small_data.tsv'
+#DATASET_FILE = 'small_data.tsv'
 
 # The black list of words to ignore
 BLACK_LIST_FILE = 'black_list.txt'
@@ -53,7 +51,7 @@ RECONSTITUTED_TEXT_FILE = 'CongressionalDocsProcessed.tsv'
 Variables related to run configuration
 """
 # Maximum number of phrases to learn
-MAX_NUM_PHRASE = 25000
+MAX_NUM_PHRASE = 500
 # MAX_NUM_PHRASE = 2000       # for small dataset
 
 # Maximum number of phrases to learn per iteration
@@ -80,14 +78,14 @@ MIN_DOC_COUNT = 2
 MAX_DOC_FREQ = 0.25
 
 # The number of topics need to train
-NUM_TOPICS = 30
+NUM_TOPICS = 20
 # NUM_TOPICS = 20       # for small dataset
 
 # The number of iterations during training the LDA model
 NUM_ITERATIONS = 2000
 
 # Number of passes through the entire corpus
-NUM_PASSES = 10
+NUM_PASSES = 1
 # NUM_PASSES = 5       # for small dataset
 
 # Number of documents to load into memory at a time and process E step of EM

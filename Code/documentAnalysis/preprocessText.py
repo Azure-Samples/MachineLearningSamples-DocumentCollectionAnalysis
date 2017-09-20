@@ -4,6 +4,7 @@ import re
 import sys
 import os
 import logging
+import urllib.request
 
 from nltk import tokenize
 from azure.storage.blob import BlockBlobService 
@@ -22,9 +23,9 @@ def download_file_from_blob(filename):
         shared_path = OUTPUT_PATH
     save_path = os.path.join(shared_path, filename)
 
-    # Define the blob service and read in the file
-    blob_service = BlockBlobService(account_name=STORAGE_ACCOUNT, account_key=STORAGE_KEY)
-    blob_service.get_blob_to_path(CONTAINER, filename, save_path)
+    url = STORAGE_CONTAINER + filename
+    logger.info("Downloading file from URL: %s" % url)
+    urllib.request.urlretrieve(url, save_path)
     logger.info("Downloaded file '%s' from blob storage to path '%s'" % (filename, save_path))
 
 
@@ -46,7 +47,7 @@ def LoadListAsHash(filename):
     logger = logging.getLogger(__name__)
 
     listHash = {}
-    with open(filename, 'r') as fp:
+    with open(filename, 'r', encoding='utf-8') as fp:
         # Read in lines one by one stripping away extra spaces, 
         # leading spaces, and trailing spaces and inserting each
         # cleaned up line into a hash table
@@ -84,7 +85,7 @@ def getData():
     if not os.path.exists(function_words_file):
         download_file_from_blob(FUNCTION_WORDS_FILE)
 
-    df = pd.read_csv(data_file, sep='\t')
+    df = pd.read_csv(data_file, sep='\t', encoding='ISO-8859-1')
     logger.info("Retrieved data frame shape: %d, %d" % (df.shape[0], df.shape[1]))
     return df
 
@@ -207,7 +208,7 @@ def loadProcessedTextData(filename=None, numPhrases=0, sep='\t'):
         if not os.path.exists(fpath):
             logger.debug("Cannot find file: %s under the shared folder" % filename)
             download_file_from_blob(filename)
-        dataDF = pd.read_csv(fpath, sep=sep)
+        dataDF = pd.read_csv(fpath, sep=sep, encoding='ISO-8859-1')
         logger.info("Total documents in corpus: %d" % len(dataDF))
         return dataDF
     # No data file name specified, read the file defined by RECONSTITUTED_TEXT_FILE 
@@ -226,7 +227,7 @@ def loadProcessedTextData(filename=None, numPhrases=0, sep='\t'):
                 logger.error("Cannot find file: %s under the shared folder" % RECONSTITUTED_TEXT_FILE)
                 return pd.DataFrame()
         logger.debug("Loading processed text file: %s" % fpath)
-        dataDF = pd.read_csv(fpath, sep=sep)
+        dataDF = pd.read_csv(fpath, sep=sep, encoding='ISO-8859-1')
         logger.info("Total documents in corpus: %d" % len(dataDF))
         return dataDF
 
@@ -255,7 +256,7 @@ def loadVocabToSurfaceForms(filename=None, numPhrases=0, sep='\t'):
         raise ValueError("Mapping of vocabulary items to their most common surface form does not exists")
     
     vocabToSurfaceFormHash = {}
-    with open(fpath) as fp:
+    with open(fpath, encoding='utf-8') as fp:
         for stringIn in fp.readlines():
             fields = stringIn.strip().split(sep)
             if len(fields != 2):

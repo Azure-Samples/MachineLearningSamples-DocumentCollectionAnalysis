@@ -20,7 +20,7 @@ def run_step1():
         cleanedDataFrame = CleanAndSplitText(textDF, saveDF=True)
     else:
         logger.info("File already existed, directly read it")
-        cleanedDataFrame = pd.read_csv(fpath, sep='\t')
+        cleanedDataFrame = pd.read_csv(fpath, sep='\t', encoding="ISO-8859-1")
     
     return cleanedDataFrame
 

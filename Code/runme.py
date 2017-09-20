@@ -13,9 +13,8 @@ from step3 import run_step3, copyFigures, visualizeTopic, saveModel
 if __name__ == '__main__':
     logging.basicConfig(format='%(asctime)s : %(name)s : %(levelname)s : %(message)s', level=logging.INFO)
 
-    # cleanedDataFrame = run_step1()
-
-    # run_step2(cleanedDataFrame)
+    cleanedDataFrame = run_step1()
+    run_step2(cleanedDataFrame)
 
     """
     Train multiple LDA models and evaluate their performance

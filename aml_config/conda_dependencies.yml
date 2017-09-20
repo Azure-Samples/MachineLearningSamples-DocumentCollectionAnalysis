@@ -19,11 +19,10 @@ dependencies:
   - gensim
   - scipy
   - wordcloud
+  - azure-storage
   - pip:
     - notebook
     - matplotlib
-    - azure-storage
-    - seaborn
     # The API for Azure Machine Learning Model Management Service.
     # Details: https://github.com/Azure/Machine-Learning-Operationalization
     - azure-ml-api-sdk==0.1.0a10

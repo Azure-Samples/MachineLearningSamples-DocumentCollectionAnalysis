@@ -7,7 +7,6 @@ import logging
 import urllib.request
 
 from nltk import tokenize
-from azure.storage.blob import BlockBlobService 
 from .configs import *
 
 

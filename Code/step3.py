@@ -117,7 +117,12 @@ def visualizeTopic(lda, topicID=0, topn=500, multiplier=1000):
     for term in tmp:
         terms.append(term)
     
-    wordcloud = WordCloud(width=640, height=480, max_words=10000, collocations=False).generate(_terms_to_counts(terms, multiplier))
+    # If the version of wordcloud is higher than 1.3, then you will need to set 'collocations' to False.
+    # Otherwise there will be word duplicates in the figure. 
+    try:
+        wordcloud = WordCloud(width=800, height=600, max_words=10000, collocations=False).generate(_terms_to_counts(terms, multiplier))
+    except:
+        wordcloud = WordCloud(width=800, height=600, max_words=10000).generate(_terms_to_counts(terms, multiplier))
     fig = plt.figure()
     plt.imshow(wordcloud)
     plt.axis("off")
@@ -131,5 +136,8 @@ def visualizeTopic(lda, topicID=0, topn=500, multiplier=1000):
 main
 """
 if __name__ == "__main__":
-    run_step3(topicConfig=[10, 20, 30, 40, 50], test_ratio=0.005, saveModel=False)
+    logging.basicConfig(format='%(asctime)s : %(name)s : %(levelname)s : %(message)s', level=logging.INFO)
+
+    run_step3(topicConfig=[10, 20, 30, 40, 50], test_ratio=0.005, saveModel=False, 
+                coherence_types=['u_mass', 'c_v', 'c_uci', 'c_npmi'])
     copyFigures()

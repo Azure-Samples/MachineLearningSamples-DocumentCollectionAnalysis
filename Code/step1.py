@@ -4,7 +4,7 @@ import pandas as pd
 import logging
 
 
-def run_step1():
+def run_step1(saveFile=True):
     """
     Step 1: data preprocessing
     """
@@ -13,14 +13,11 @@ def run_step1():
     fpath = get_shared_file_path(CLEANED_DATA_FILE_NAME)
     logger.info("=========  Run Step 1: preprocessing text data")
 
-    if not os.path.exists(fpath):
-        # Read raw data into a Pandas DataFrame
-        textDF = getData()
-        # Write frame with preprocessed text out to TSV file
-        cleanedDataFrame = CleanAndSplitText(textDF, saveDF=True)
-    else:
-        logger.info("File already existed, directly read it")
-        cleanedDataFrame = pd.read_csv(fpath, sep='\t', encoding="ISO-8859-1")
+    # Read raw data into a Pandas DataFrame
+    textDF = getData()
+
+    # Write frame with preprocessed text out to TSV file
+    cleanedDataFrame = CleanAndSplitText(textDF, idColumnName='ID', textColumnName='Text', saveDF=saveFile)
     
     return cleanedDataFrame
 
@@ -30,5 +27,7 @@ def run_step1():
 main
 """
 if __name__ == "__main__":
-    cleanedDataFrame = run_step1()
+    logging.basicConfig(format='%(asctime)s : %(name)s : %(levelname)s : %(message)s', level=logging.INFO)
+
+    cleanedDataFrame = run_step1(saveFile=True)
     print(cleanedDataFrame.head())

@@ -68,6 +68,8 @@ def run_step2(cleanedDataFrame, config=(0, 0, 0), numPhrase=MAX_NUM_PHRASE, maxP
 main
 """
 if __name__ == "__main__":
-    cleanedDataFrame = run_step1()
-    run_step2(cleanedDataFrame, config=(2000, 2000, 1))
+    logging.basicConfig(format='%(asctime)s : %(name)s : %(levelname)s : %(message)s', level=logging.INFO)
+
+    cleanedDataFrame = run_step1(saveFile=False)
+    run_step2(cleanedDataFrame=cleanedDataFrame, config=(2000, 2000, 1))
 

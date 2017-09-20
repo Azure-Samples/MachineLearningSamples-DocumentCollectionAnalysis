@@ -3,7 +3,7 @@
 
 # For third-party python libraries, see conda_dependencies.yml.
 configuration:
-  "spark.app.name": "Document Analysis"
+  "spark.app.name": "Document Collection Analysis"
   "spark.yarn.maxAppAttempts": 1
 repositories:
   - "https://mmlspark.azureedge.net/maven"

@@ -1,20 +1,14 @@
 # Document Collection Analysis
 
-![Data_Diagram](https://www.usb-antivirus.com/wp-content/uploads/2014/11/tutorial-windwos-10-2-320x202.png)
-
-**[Detailed documentation (TODO)]()**
-
-## Introduction
+**[Detailed documentation (TODO)](./DO_NOT_CLICK)**
 
 This scenario demonstrates how to summarize and analyze a large collection of documents, including techniques such as phrase learning, topic modeling, and topic model analysis using Azure ML Workbench. Azure Machine Learning Workbench provides for easy scale up for very large document collection, and provides mechanisms to train and tune models within a variety of compute contexts, ranging from local compute to Data Science Virtual Machines to Spark Cluster. Easy development is provided through Jupyter notebooks within Azure Machine Learning Workbench.
 
-## Prerequisites
+## Link to the Gallery GitHub repository
 
-The prerequisites to run this example are as follows:
+The public GitHub repository for this real world scenario contains all materials, including code samples, needed for this example:
 
-1. Make sure that you have properly installed [Azure Machine Learning Workbench (TODO)](./overview-what-is-azure-ml) by following the [quick start installation guide (TODO)](./quick-start-installation).
-
-1. This example could be run on any compute context. However, it is recommended to run it on a multi-core machine with at least of 16-GB memory and 5-GB disk space.
+[https://github.com/Azure/MachineLearningSamples-DocumentCollectionAnalysis](https://github.com/Azure/MachineLearningSamples-DocumentCollectionAnalysis)
 
 ## Overview
 
@@ -43,6 +37,23 @@ The machine learning techniques/algorithms used in this scenario include:
 1. Corpus summarization
 
 1. Topical trends and anomaly detection
+
+## Prerequisites
+
+The prerequisites to run this example are as follows:
+
+* Make sure that you have properly installed [Azure Machine Learning Workbench (TODO)](./DO_NOT_CLICK) by following the [quick start installation guide (TODO)](./DO_NOT_CLICK).
+
+* This example could be run on any compute context. However, it is recommended to run it on a multi-core machine with at least of 16-GB memory and 5-GB disk space.
+
+## Create a new Workbench project
+
+Create a new project using this example as a template:
+1.	Open Azure Machine Learning Workbench
+2.	On the **Projects** page, click the **+** sign and select **New Project**
+3.	In the **Create New Project** pane, fill in the information for your new project
+4.	In the **Search Project Templates** search box, type "Document Collection Analysis" and select the template
+5.	Click **Create**
 
 ## Contributing
 

@@ -3,8 +3,8 @@
 # Except this file
 !.gitignore
 !conda_dependencies.yml
-!spark_dependencies.yml
 !docker.compute
 !docker.runconfig
 !local.compute
 !local.runconfig
+!spark_dependencies.yml

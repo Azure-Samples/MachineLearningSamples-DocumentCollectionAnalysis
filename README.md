@@ -46,7 +46,7 @@ The machine learning techniques/algorithms used in this scenario include:
 
 The prerequisites to run this example are as follows:
 
-* Make sure that you have properly installed [Azure Machine Learning Workbench (TODO)](https://docs.microsoft.com/azure/machine-learning/preview/overview-what-is-azure-ml) by following the [quick start installation guide (TODO)](https://docs.microsoft.com/azure/machine-learning/preview/quickstart-installation).
+* Make sure that you have properly installed [Azure Machine Learning Workbench](https://docs.microsoft.com/azure/machine-learning/preview/overview-what-is-azure-ml) by following the [quick start installation guide](https://docs.microsoft.com/azure/machine-learning/preview/quickstart-installation).
 
 * This example could be run on any compute context. However, it is recommended to run it on a multi-core machine with at least of 16-GB memory and 5-GB disk space.
 

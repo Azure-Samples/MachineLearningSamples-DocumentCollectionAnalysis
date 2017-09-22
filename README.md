@@ -1,10 +1,6 @@
 # Document Collection Analysis
 
-<<<<<<< HEAD
 ## Link to the Microsoft DOCS site
-=======
-**[Detailed documentation](https://docs.microsoft.com/en-us/azure/machine-learning/preview/scenario-document-collection-analysis)**
->>>>>>> origin/master
 
 The detailed documentation for this real world scenario includes the step-by-step walkthrough:
 
@@ -50,7 +46,7 @@ The machine learning techniques/algorithms used in this scenario include:
 
 The prerequisites to run this example are as follows:
 
-* Make sure that you have properly installed [Azure Machine Learning Workbench](https://docs.microsoft.com/en-us/azure/machine-learning/preview/overview-what-is-azure-ml) by following the [quick start installation guide](https://docs.microsoft.com/en-us/azure/machine-learning/preview/quickstart-installation).
+* Make sure that you have properly installed [Azure Machine Learning Workbench (TODO)](./README.md) by following the [quick start installation guide (TODO)](./README.md).
 
 * This example could be run on any compute context. However, it is recommended to run it on a multi-core machine with at least of 16-GB memory and 5-GB disk space.
 

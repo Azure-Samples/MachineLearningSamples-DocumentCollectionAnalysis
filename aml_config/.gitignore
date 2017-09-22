@@ -8,3 +8,4 @@
 !local.compute
 !local.runconfig
 !spark_dependencies.yml
+!jupyter_notebook_config.py

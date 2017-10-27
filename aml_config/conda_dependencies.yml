@@ -12,6 +12,7 @@ channels:
   - defaults
 dependencies:
   - python=3.5.2
+  - numpy>=1.13
   - scikit-learn
   - nltk
   - pandas
@@ -19,10 +20,12 @@ dependencies:
   - gensim
   - scipy
   - wordcloud
-  - azure-storage
+  - bokeh
   - pip:
     - notebook
+    - gensim
     - matplotlib
+    - azure-storage
     # The API for Azure Machine Learning Model Management Service.
     # Details: https://github.com/Azure/Machine-Learning-Operationalization
     - azure-ml-api-sdk==0.1.0a11

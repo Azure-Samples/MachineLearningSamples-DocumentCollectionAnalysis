@@ -8,6 +8,7 @@ import urllib.request
 
 from nltk import tokenize
 from .configs import *
+from azureml.logging import get_azureml_logger
 
 
 
@@ -90,6 +91,9 @@ def getData():
 
 
 def CleanAndSplitText(textDataFrame, idColumnName='ID', textColumnName='Text', saveDF=False):
+    aml_logger = get_azureml_logger()   # logger writes to AMLWorkbench runtime view
+    aml_logger.log('amlrealworld.document-collection-analysis.preprocessText', 'true')
+
     logger = logging.getLogger(__name__)
 
     # Need to download the 'punkt' model for breaking text

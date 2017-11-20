@@ -43,6 +43,7 @@ class TopicModeler(object):
 
         # initialize the run logger
         self.run_logger = get_azureml_logger()
+        self.run_logger.log('amlrealworld.document-collection-analysis.topicModeling', 'true')
 
         if not textData or not isinstance(textData, list):
             raise ValueError("Text data should be non-empty and in the format of list.")

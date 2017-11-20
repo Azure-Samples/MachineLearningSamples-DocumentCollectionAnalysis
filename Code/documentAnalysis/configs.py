@@ -9,8 +9,8 @@ STORAGE_CONTAINER = 'https://bostondata.blob.core.windows.net/scenario-document-
 OUTPUT_PATH = 'outputs'
 
 # The dataset file name, change this to use a small dataset
-DATASET_FILE = 'CongressionalDataAll_Jun_2017.tsv'
-# DATASET_FILE = 'small_data.tsv'
+# DATASET_FILE = 'CongressionalDataAll_Jun_2017.tsv'
+DATASET_FILE = 'small_data.tsv'
 
 # The black list of words to ignore
 BLACK_LIST_FILE = 'black_list.txt'

@@ -5,6 +5,7 @@ from step1 import run_step1
 import os
 import pandas as pd
 import logging
+from azureml.logging import get_azureml_logger
 
 
 def run_step2(cleanedDataFrame, config=(0, 0, 0), numPhrase=MAX_NUM_PHRASE, maxPhrasePerIter=MAX_PHRASE_PER_ITER,
@@ -12,6 +13,9 @@ def run_step2(cleanedDataFrame, config=(0, 0, 0), numPhrase=MAX_NUM_PHRASE, maxP
     """
     Step 2: phrase learning
     """
+    aml_logger = get_azureml_logger()   # logger writes to AMLWorkbench runtime view
+    aml_logger.log('amlrealworld.document-collection-analysis.step2', 'true')
+    
     logger = logging.getLogger(__name__)
     logger.info("=========  Run Step 2: learn phrases from data")
 

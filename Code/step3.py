@@ -21,6 +21,9 @@ def run_step3(topicConfig=[], test_ratio=0.005, saveModel=True, coherence_types=
     """
     Step 3: LDA topic modeling
     """
+    aml_logger = get_azureml_logger()   # logger writes to AMLWorkbench runtime view
+    aml_logger.log('amlrealworld.document-collection-analysis.step3', 'true')
+
     logger = logging.getLogger(__name__)
     logger.info("=========  Run Step 3: LDA topic modeling")
 

@@ -50,6 +50,9 @@ The prerequisites to run this example are as follows:
 
 * This example could be run on any compute context. However, it is recommended to run it on a multi-core machine with at least of 16-GB memory and 5-GB disk space.
 
+## Data/Telemetry
+This advance scenarios for _Document Collection Analysis_ collects usage data and sends it to Microsoft to help improve our products and services. Read our [privacy statement](https://privacy.microsoft.com/en-us/privacystatement) to learn more.
+
 ## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
